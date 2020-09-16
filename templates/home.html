@@ -1,0 +1,45 @@
+<form method="post" novalidate>
+    {% csrf_token %}
+
+    {{ form.errors }}
+    {{ form.non_field_errors }}
+
+    <table border="1">
+  
+        <tr>
+          <th>ASN</th>
+          <td>
+            {{ form.asn.errors }}
+            {{ form.asn }}
+          </td>
+        </tr>
+  
+        <tr>
+          <th>PEER</th>
+          <td>
+            {{ form.peer.errors }}
+            {{ form.peer }}
+          </td>
+        </tr>
+  
+        <tr>
+          <th>PEER ASN</th>
+          <td>
+            {{ form.peerasn.errors }}
+            {{ form.peerasn }}
+          </td>
+        </tr>
+
+        <tr>
+          <th>NETWORK</th>
+          <td>
+            {{ form.netw.errors }}
+            {{ form.netw }}
+          </td>
+        </tr>
+  
+    </table>
+  
+    <button type="submit">Submit</button>
+  </form>
+

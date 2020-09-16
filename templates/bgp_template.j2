@@ -1,0 +1,7 @@
+router bgp {{ j2_asn }}
+  address-family ipv4
+   no synchronization
+   neighbor {{ j2_peer }} remote-as {{ j2_peerasn }}
+   neighbor {{ j2_peer }} activate
+   neighbor {{ j2_peer }} soft-reconfiguration inbound
+   network {{ j2_netw }} mask 255.255.255.0
